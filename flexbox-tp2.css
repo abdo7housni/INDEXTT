@@ -69,12 +69,6 @@
   font-size: 0.9cm;
 }
 
-.BOX2{
-    background-color: rgb(12, 12, 12);
-    width: 300px;
-    height: 500px;
-    margin-top: 5px;
-}
 
 .bb{
     background: rgba(255, 255, 255, .1);
@@ -272,4 +266,37 @@ footer h3 {
     background-color: #85c7f4;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
+}
+
+@media screen and (max-width : 500px)
+{.links{
+  z-index: 1;
+  margin: -20% 0% 0% 0%;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  background: rgba(255, 255, 255, .1);
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(255, 255, 255, .2);
+  display: flex;
+  flex-direction: column;
+}}
+
+@media screen and (max-width : 500) 
+{.bb{
+    background: rgba(255, 255, 255, .1);
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+    height: 900px;
+    width: 30cm;
+    margin-top: 20%;
+    margin-left: 15%;
+    align-content: space-between;
+    text-align: center;
+    flex-direction:column ;
+    display: flex;
+}
+    
 }
