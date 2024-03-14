@@ -3,11 +3,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(back-ground-pc.jpg);
+    background-image: url(back-ground/back-ground-pc.jpg);
 }
 .menu-f{
     color: aliceblue;
@@ -20,7 +18,7 @@
 }
 
 .links{
-    margin: -20% 0% 0% 0%;
+    margin-top: -30%;
     z-index: 1;
     width: 100%;
     height: 100px;
@@ -86,7 +84,7 @@
     border-bottom: 2px solid rgba(255, 255, 255, .2);
     height: 900px;
     width: 30cm;
-    margin-top: 20%;
+    margin-top: 0%;
     margin-left: 15%;
     align-content: space-between;
     text-align: center;
@@ -151,12 +149,6 @@ align-items: center;}
     width: 250px;
     border-radius: 10px;
     padding-right: 50px;   
-}
-
-@media (max-width:700px)
-{
-    .dd{
-        display: block;    }
 }
     
 footer #footer-above {
@@ -280,3 +272,78 @@ footer h3 {
 
 }
 
+@media screen and (max-width:600px) {
+    .back-ground-phone{
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(back-ground/back-ground-phone.jpg);
+    }
+    
+    .links{
+        margin-top: -100%;
+        z-index: 1;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, .1);
+        align-items: center;
+        backdrop-filter: blur(10px);
+        border-bottom: 2px solid rgba(255, 255, 255, .2);
+        height: 9cm;
+    }
+    
+
+    .bb{
+        margin-left: 0%;
+        background: rgba(255, 255, 255, .1);
+        align-items: center;
+        backdrop-filter: blur(10px);
+        border-bottom: 2px solid rgba(255, 255, 255, .2);
+        margin-top: 100%;
+        align-content: space-between;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .zz{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .maalomat{
+        padding-right:1% ;
+        padding-left: 1%;
+        margin: 20% 0% 0% 0%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, .1);
+        align-items: center;
+        backdrop-filter: blur(10px);
+        border-bottom: 2px solid rgba(255, 255, 255, .2);
+        justify-content: center;
+    }
+    .prlm{
+        height: 22cm;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
+    }
+        
+    .bb .ss .zz h1{
+        text-align: left;
+        overflow: hidden;
+        color: rgb(246, 246, 250);
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+}
