@@ -30,6 +30,9 @@
     border-bottom: 2px solid rgba(255, 255, 255, .2);
 
 }
+.lien {
+    text-decoration: none;
+}
 .maalomat{
   padding-right:1% ;
   padding-left: 1%;
@@ -143,7 +146,8 @@
     padding-top: 0%;
 }
 .ee{
-align-items: center;}
+align-items: center;
+}
 .imag{
     height: 250px;
     width: 250px;
@@ -272,7 +276,7 @@ footer h3 {
 
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:600px) {
     .back-ground-phone{
         background-size: cover;
         background-repeat: no-repeat;
