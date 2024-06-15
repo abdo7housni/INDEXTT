@@ -1,3 +1,6 @@
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +16,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-image: url(back-ground/back-ground-pc.jpg);
+    background-image: url(../back-ground/back-ground-pc.jpg);
     font-family: 'Roboto', sans-serif;
     background-color: #f7f7f7;
     display: flex;

@@ -1,8 +1,17 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("Location: login/login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style & js/style.css">
+    <link rel="stylesheet" href="style & js/bootstrap.min.js">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,15 +20,19 @@
     <title>project</title>
 </head>
 <body>
+
     <div><img class="back-ground-pc" src="back-ground/back-ground-pc.jpg" alt="#"></div>
     <div><img class="back-ground-phone" src="back-ground/back-ground-phone.jpg" alt="#"></div>
-    <nav class="links">
+    <div class="links">
         <label ><a class="menu-f" href="#rijal">ملابس الرجال</a></label>
         <label ><a class="menu-f" href="#nissae">ملابس الحج النساء</a></label>
         <label ><a class="menu-f" href="#hotels">الفنادق</a></label>
         <label ><a class="menu-f" href="#info-l7aj">معلومات للحجاج</a> </label>
         <label ><a class="menu-f" href="#contact">للمزيد من الماعلومات</a></label>
-    </nav>
+        <label ><a  class="menu-f" href="login/login.php">تسجيل الخروج</a></label>
+
+    </div>
+    
     
     <div class="bb">
         <div class="ss">
@@ -114,7 +127,7 @@
             
             
             فهذه الأركان الأربعة : الإحرام ، والوقوف بعرفة ، وطواف الإفاضة ، والسعي بين الصفا والمروة لا يصح الحج بدونها ، ولا يجبر ترك شيء منها بدم ولا بغيره ، بل لا بد من فعله ، كما أن الترتيب في فعل هذه الأركان شرط لا بد منه لصحتها ؛ فيُشترط تقديم الإحرام عليها جميعاً ، وتقديم وقوف عرفة على طواف الإفاضة ، إضافة إلى الإتيان بالسعي بعد طواف صحيح عند جمهور أهل العلم .</p>
-   
+
     </div>
 
     <div id="contact" class="bb">
@@ -138,10 +151,20 @@
                     <button type="submit" class="btn btn-primary">إرسال</button>
                 </form>
             </ul><br><br>
-        </div>
+            <div id="footer-above">
+                <div class="tawassol">
+                    <h3>Find me on</h3>
+                    <ul id="contact">
+                        <li><a class="button social" href="https://www.facebook.com/abdlwahd.hossni?mibextid=ZbWKwL" target="_blank"><i class="fa fa-fw fa-facebook"></i></a></li>
+                        <li><a class="button social" href="https://www.instagram.com/hossni.abdo?igsh=dTluM29hbmplNWJy" target="_blank"><i class="fa fa-fw fa-instagram"></i></a></li>
+                        <li><a class="button social" href="https://wa.me/qr/PM7AKUW4KOQXG1" target="_blank"><i class="fa fa-fw fa-whatsapp"></i></a></li>
+                        <li><a class="button social" href="https://t.me/+212696791587" target="_blank"><i class="fa fa-telegram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
     </div>
     
-    <script src="index2.js" >
+    <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
