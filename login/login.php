@@ -9,6 +9,7 @@
 
         if (empty($email) || empty($mdp)) {
             header('location: login.php?error=veuillez remplir tout les champ');
+<<<<<<< HEAD
             echo "Login or password is FALSE.";
 
             exit();
@@ -19,6 +20,16 @@
         $stm=$conn->prepare($query) ;
         $stm->bindParam('email', $email);
         $stm->bindParam('mdp', $mdp);
+=======
+            exit();
+        }
+
+        $query = "SELECT * FROM client WHERE email = :email AND mdp = :mdp";
+       
+        $stm=$conn->prepare($query) ;
+        $stm->bindParam(':email', $email);
+        $stm->bindParam(':mdp', $mdp);
+>>>>>>> 624c8a8cea32ee661ee5878b3cfd5b16057e7428
         $stm->execute();
 
         if ($stm->rowCount() == 1) {
@@ -28,8 +39,11 @@
             exit();
         } else {
             header('Location: login.php?error=Email ou mot de passe incorrect');
+<<<<<<< HEAD
             echo "Login or password is incorrect.";
 
+=======
+>>>>>>> 624c8a8cea32ee661ee5878b3cfd5b16057e7428
             exit();
         }
     }
@@ -108,6 +122,7 @@
 <body>
     <div class="login-container">
         <h2>تسجيل الدخول</h2>
+<<<<<<< HEAD
         <form id="login-form" action="login.php" method="post">
             <div class="form-group">
                 <label for="email">إسم المستخدم</label>
@@ -115,6 +130,15 @@
             </div>
             <div class="form-group">
                 <label for="mdp">كلمة المرور</label>
+=======
+        <form id="login-form" action="login.php" method="POST">
+            <div class="form-group">
+                <label for="username">إسم المستخدم</label>
+                <input name="email" type="text" id="username" class="form-control" placeholder="أدخل إسم المستخدم">
+            </div>
+            <div class="form-group">
+                <label for="password">كلمة المرور</label>
+>>>>>>> 624c8a8cea32ee661ee5878b3cfd5b16057e7428
                 <input name="mdp" type="password" id="password" class="form-control" placeholder="أدخل كلمة المرور">
             </div>
             <button type="submit" class="btn">تسجيل الدخول</button><br><br>

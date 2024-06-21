@@ -1,13 +1,20 @@
 <?php
 session_start();
 
+<<<<<<< HEAD
 if (!isset($_SESSION['email']) || empty($_SESSION['email'])) {
+=======
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+>>>>>>> 624c8a8cea32ee661ee5878b3cfd5b16057e7428
     header("Location: login/login.php");
     exit();
 }
 ?>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 624c8a8cea32ee661ee5878b3cfd5b16057e7428
 <!DOCTYPE html>
 <html lang="en">
 <head>
